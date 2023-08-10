@@ -1,5 +1,26 @@
+/* класс nav по семантике означает навигацию*/ 
+body {
+    height: 100%;
+    line-height: 1;
+}
 body {
     font-family: Rubik;
     font-size: 14px;
     color: #616161;
+}
+/* ------------------------------------------ */
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+/* ------------------------------------------ */
+
+.main {
+    flex: 1 1 auto;
+}
+[class*="__container"] { /* css селектор атрибута.  любой объект с этим классом с такими стилями будет*/
+    max-width: 1057px;
+    margin: 0px auto; /*чтоб все было по центру */ 
 }
