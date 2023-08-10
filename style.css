@@ -23,11 +23,30 @@ body {
 [class*="__container"] { /* css селектор атрибута.  любой объект с этим классом с такими стилями будет*/
     max-width: 1057px;
     margin: 0px auto; /*чтоб все было по центру */ 
+    padding: 0px 15px; /* отступы безопасности */
 }
-
+@media (max-width: 1087px) { /* выстраиваем breakpoint'ы, стандартная ширина + паддинг*/
+    [class*="__container"] { 
+        max-width: 970px;
+    }
+}
+@media (max-width: 991.98px) { 
+    [class*="__container"] { 
+        max-width: 750px;
+    }
+}
+@media (max-width: 767.98px) { 
+    [class*="__container"] { 
+        max-width: none;
+    }
+}
 .header {
-
-}
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50; /* этими настройками зафиксировали шапку*/
+}   
 .header__container {
     display: flex;
     min-height: 114px;
@@ -62,6 +81,10 @@ body {
     font-weight: 700;
     letter-spacing: 1.4px;
     line-height: 1.2; /* относительное значение которое полдстроится при изменении размера шрифта*/
+    transition: color 0.3s ease 0s;
+}
+.menu__link:hover {
+    color: #EC5863; 
 }
 
 .button {
