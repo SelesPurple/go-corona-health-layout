@@ -62,10 +62,13 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+
+
 .menu {
     display: flex;
     justify-content: flex-end;
-    }
+}
+
 .menu__list {
     display: flex;
 
@@ -73,6 +76,7 @@ body {
 .menu__item {
     margin-right: 40px;
 }
+
 .menu__link {
     font-family: Raleway;
     text-transform: uppercase;
@@ -85,6 +89,18 @@ body {
 }
 .menu__link:hover {
     color: #EC5863; 
+}
+
+@media (max-width: 991.98px) {
+    .header__container {
+        min-height: 80px;
+    }
+    .menu__item {
+        margin-right: 30px;
+    }
+    .header__button {
+        flex: 0 0 150px;
+    }
 }
 
 .button {
